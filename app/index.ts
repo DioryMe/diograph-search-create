@@ -2,19 +2,17 @@ import * as $ from "jquery";
 import * as Bloodhound from "corejs-typeahead/dist/bloodhound";
 import "corejs-typeahead/dist/typeahead.jquery";
 
-var bestPictures = new Bloodhound({
+var searchResults = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
   queryTokenizer: Bloodhound.tokenizers.whitespace,
-  prefetch: '../data/films/post_1960.json',
   remote: {
-    url: '../data/films/queries/%QUERY.json',
+    url: 'http://diory-server.herokuapp.com/v1/search?q=%QUERY',
     wildcard: '%QUERY'
   }
 });
 
-$('#remote .typeahead').typeahead(null, {
-  name: 'best-pictures',
+$('#search-create .typeahead').typeahead(null, {
   display: 'value',
-  source: bestPictures
+  source: searchResults
 });
 
