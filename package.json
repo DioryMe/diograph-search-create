@@ -4,18 +4,18 @@
   "description": "",
   "main": "app/index.ts",
   "scripts": {
-    "start": "webpack && node dist/bundle.js",
+    "start": "webpack && http-server ./dist",
     "test": "tsc && jasmine JASMINE_CONFIG_PATH=jasmine.json"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "ts-loader": "*",
-    "typescript": "*",
-    "webpack": "*",
-    "jasmine": "*",
     "@types/jasmine": "*",
     "@types/node": "*",
-    "selenium-webdriver": "*"
+    "jasmine": "*",
+    "selenium-webdriver": "*",
+    "ts-loader": "*",
+    "typescript": "*",
+    "webpack": "*"
   }
 }

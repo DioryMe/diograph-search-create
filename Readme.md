@@ -14,7 +14,7 @@ npm start
 
 Compiles Typescript into Javascript starting from `app/index.ts`.
 Compiled Javascript is placed into `dist/bundle.js`.
-Then it runs `node dist/index.js`.
+Then it runs a server in `http://localhost:8080`.
 
 ## Tests
 
