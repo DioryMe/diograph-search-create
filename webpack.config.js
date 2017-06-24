@@ -1,8 +1,10 @@
+var path = require("path")
+
 module.exports = {
     entry: "./app/index.ts",
     output: {
-        filename: "./dist/bundle.js",
-        path: __dirname,
+        filename: "bundle.js",
+        path: path.resolve(__dirname, "dist")
     },
     module: {
         loaders: [
@@ -11,5 +13,14 @@ module.exports = {
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js']
+    },
+    devServer: {
+      contentBase: path.join(__dirname, 'dist'),
+      compress: true,
+      port: 9000,
+      watchOptions: {
+        poll: true
+      },
+      hot: true
     }
 };

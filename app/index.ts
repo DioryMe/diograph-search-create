@@ -18,7 +18,7 @@ $('#search-create .typeahead').typeahead(null, {
   source: searchResults,
   templates: {
     suggestion: function(value) {
-      return `<div style="color: red">${value.value}</div>`
+      return `<div style="color: green">${value.value}</div>`
     },
     empty: function() {
       return "<div>No results</div>"
