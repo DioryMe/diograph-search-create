@@ -4,7 +4,7 @@
   "description": "",
   "main": "app/index.ts",
   "scripts": {
-    "start": "webpack && http-server ./dist",
+    "start": "webpack-dev-server",
     "test": "tsc && jasmine JASMINE_CONFIG_PATH=jasmine.json"
   },
   "author": "",
