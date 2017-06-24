@@ -1,7 +1,6 @@
-import { Bloodhound } from "corejs-typeahead";
-import { $ } from "jquery";
-
-console.log("Hello world!")
+import * as $ from "jquery";
+import * as Bloodhound from "corejs-typeahead/dist/bloodhound";
+import "corejs-typeahead/dist/typeahead.jquery";
 
 var bestPictures = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),

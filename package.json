@@ -13,6 +13,7 @@
     "@types/jasmine": "*",
     "@types/node": "*",
     "corejs-typeahead": "^1.1.1",
+    "jquery": "^2.0",
     "jasmine": "*",
     "selenium-webdriver": "*",
     "ts-loader": "*",
