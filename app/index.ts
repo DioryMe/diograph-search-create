@@ -12,7 +12,17 @@ var searchResults = new Bloodhound({
 });
 
 $('#search-create .typeahead').typeahead(null, {
+  hint: false,
+  minLength: 3,
   display: 'value',
-  source: searchResults
+  source: searchResults,
+  templates: {
+    suggestion: function(value) {
+      return `<div style="color: red">${value.value}</div>`
+    },
+    empty: function() {
+      return "<div>No results</div>"
+    }
+  }
 });
 
