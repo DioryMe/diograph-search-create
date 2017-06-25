@@ -1,0 +1,38 @@
+.tt-input {
+  line-height: 48px;
+  font-size: 36px;
+  width: 500px;
+}
+
+.hidden {
+  display: none;
+}
+
+.diory-element__element {
+  display: table;
+  table-layout: fixed;
+  margin: 3px;
+  width: 100%;
+  height: auto;
+  position: relative;
+  border: 3px solid lightgray;
+  border-radius: 5px;
+}
+
+.diory-element__title {
+  display: table-cell;
+  text-align: center;
+  padding: 10px 5px;
+  width: 400px;
+}
+
+.diory-element__action {
+  display: table-cell;
+  background-color: lightblue;
+  width: 100px;
+  height: auto;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+

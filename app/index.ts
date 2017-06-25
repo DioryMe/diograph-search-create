@@ -11,18 +11,26 @@ var searchResults = new Bloodhound({
   }
 });
 
-$('#search-create .typeahead').typeahead(null, {
-  hint: false,
-  minLength: 3,
-  display: 'value',
-  source: searchResults,
-  templates: {
-    suggestion: function(value) {
-      return `<div style="color: red">${value.value}</div>`
-    },
-    empty: function() {
-      return "<div>No results</div>"
+$('#search-create .typeahead').typeahead({
+    hint: false,
+    minLength: 3
+  }, {
+    display: 'value',
+    source: searchResults,
+    templates: {
+      suggestion: function(value) {
+        return `
+          <div class="search-result diory-element__element">
+              <div class="diory-element__title">
+                ${value.value}
+              </div>
+          </div>`
+      },
+      empty: function() {
+        return `<div class="search-result diory-element__element">
+                  <div class="diory-element__title">No results.</div>
+                </div>`
+      }
     }
-  }
 });
 
