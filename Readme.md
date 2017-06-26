@@ -1,12 +1,6 @@
 # Diograph Search Create
 
-## Install dependencies
-
-```
-npm install
-```
-
-## Bundle
+## Development
 
 ```
 npm start
