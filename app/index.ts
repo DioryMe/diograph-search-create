@@ -6,8 +6,14 @@ var searchResults = new Bloodhound({
   datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
   queryTokenizer: Bloodhound.tokenizers.whitespace,
   remote: {
-    url: 'http://diory-server.herokuapp.com/v1/search?q=%QUERY',
-    wildcard: '%QUERY'
+    url: 'http://diory-server.herokuapp.com/v1/search',
+    prepare: function(query, settings) {
+      settings.url = settings.url + '?q=' + query,
+      settings.headers = {
+        "Authorization": "test-token"
+      };
+      return settings;
+    }
   }
 });
 
