@@ -44,3 +44,22 @@ $('#search-create .typeahead').typeahead({
     }
 });
 
+// X click
+$('.search-create__cancel').click(() => {
+  $('.typeahead').typeahead('val', '');
+})
+
+// Loading starts
+$('#search-create').bind('typeahead:asyncrequest', function() {
+  $('#loading-icon').css('display', 'block');
+});
+
+// Loading ends
+$('#search-create').bind('typeahead:asyncreceive', function() {
+  $('#loading-icon').hide();
+});
+
+// Loadinc cancelled (esc)
+$('#search-create').bind('typeahead:asynccancel', function() {
+  $('#loading-icon').hide();
+});

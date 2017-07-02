@@ -5,6 +5,7 @@
 
 #loading-icon {
   position: absolute;
+  display: none;
   top: 14px;
   right: 60px;
 }
