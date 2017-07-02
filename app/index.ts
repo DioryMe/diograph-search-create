@@ -1,3 +1,6 @@
+require('./index.html');
+require('./main.css');
+
 import * as $ from "jquery";
 import * as Bloodhound from "corejs-typeahead/dist/bloodhound";
 import "corejs-typeahead/dist/typeahead.jquery";

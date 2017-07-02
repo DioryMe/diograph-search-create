@@ -8,11 +8,12 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.tsx?$/, loader: "ts-loader" }
+            { test: /\.tsx?$/, loader: "ts-loader" },
+            { test: /\.(html|css)$/, loader: "file-loader?name=[name].[ext]" }
         ]
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.js']
+        extensions: ['.html', '.css', '.ts', '.tsx', '.js']
     },
     devServer: {
       contentBase: path.join(__dirname, 'dist'),
