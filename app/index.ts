@@ -1,5 +1,6 @@
 require('./index.html');
 require('./main.css');
+require('./loading.gif');
 
 import * as $ from "jquery";
 import * as Bloodhound from "corejs-typeahead/dist/bloodhound";

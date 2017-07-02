@@ -1,7 +1,22 @@
+
+#search-create {
+  position: relative;
+}
+
+#loading-icon {
+  position: absolute;
+  top: 14px;
+  right: 60px;
+}
+
+.twitter-typeahead {
+  width: 100%;
+}
+
 .tt-input {
   line-height: 48px;
   font-size: 36px;
-  width: 500px;
+  width: 100%;
 }
 
 .hidden {
