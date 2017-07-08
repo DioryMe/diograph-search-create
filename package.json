@@ -2,12 +2,13 @@
   "name": "diograph-search-create",
   "version": "0.0.1",
   "description": "",
-  "main": "lib/index.js",
+  "main": "lib/diograph-search-create.js",
   "scripts": {
     "start": "webpack-dev-server",
     "test": "tsc && jasmine JASMINE_CONFIG_PATH=jasmine.json",
-    "build": "tsc app/diograph-search-create.ts --outDir lib"
+    "build": "tsc app/diograph-search-create.ts --outDir lib --target es6 --module commonjs && ./node_modules/.bin/babel lib/* -d ."
   },
+
   "author": "",
   "license": "ISC",
   "dependencies":{
@@ -23,6 +24,8 @@
     "selenium-webdriver": "*",
     "ts-loader": "*",
     "typescript": "*",
-    "webpack": "*"
+    "webpack": "*",
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2"
   }
 }
