@@ -1,3 +1,4 @@
+import 'document-register-element'
 import * as $ from "jquery";
 import * as Bloodhound from "corejs-typeahead/dist/bloodhound";
 import "corejs-typeahead/dist/typeahead.jquery";
@@ -151,3 +152,5 @@ export class DiographSearchCreate extends HTMLElement {
   };
 
 }
+
+(document as any).registerElement('diograph-search-create', DiographSearchCreate);
