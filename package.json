@@ -19,6 +19,7 @@
     "selenium-webdriver": "*",
     "ts-loader": "*",
     "typescript": "*",
-    "webpack": "*"
+    "webpack": "*",
+    "document-register-element": "^1.5.0"
   }
 }
