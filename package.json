@@ -1,6 +1,6 @@
 {
   "name": "diograph-search-create",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "lib/diograph-search-create.js",
   "scripts": {
@@ -8,10 +8,9 @@
     "test": "tsc && jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "build": "tsc app/diograph-search-create.ts --outDir lib --target es6 --module commonjs && ./node_modules/.bin/babel lib/* -d ."
   },
-
   "author": "",
   "license": "ISC",
-  "dependencies":{
+  "dependencies": {
     "document-register-element": "^1.5.0",
     "corejs-typeahead": "^1.1.1",
     "jquery": "^2.0"
