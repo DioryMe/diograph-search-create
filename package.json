@@ -1,11 +1,12 @@
 {
-  "name": "typescript-template",
+  "name": "diograph-search-create",
   "version": "0.0.1",
   "description": "",
-  "main": "app/index.ts",
+  "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "tsc && jasmine JASMINE_CONFIG_PATH=jasmine.json"
+    "test": "tsc && jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "build": "tsc app/diograph-search-create.ts --outDir lib"
   },
   "author": "",
   "license": "ISC",
