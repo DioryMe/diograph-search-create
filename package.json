@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "test": "tsc && jasmine JASMINE_CONFIG_PATH=jasmine.json",
-    "build": "tsc app/diograph-search-create.ts --outDir lib --target es6 --module commonjs && ./node_modules/.bin/babel lib/* -d ."
+    "compile": "tsc app/diograph-search-create.ts --outDir lib --target es6 --module commonjs && ./node_modules/.bin/babel lib/* -d ."
   },
   "author": "",
   "license": "ISC",
