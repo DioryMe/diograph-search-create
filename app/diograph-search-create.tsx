@@ -9,7 +9,7 @@ export class DiographSearchCreate extends React.Component<SearchCreateProps, Sea
 
   constructor(props) {
     super(props)
-    this.state = {searchResults: [], searchTerm: "paikka"}
+    this.state = {searchResults: [], searchTerm: ""}
   }
 
   render() {
