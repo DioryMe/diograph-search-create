@@ -15,7 +15,7 @@ import { DiographSearchCreate } from "diograph-search-create"
 ## Development
 
 ```
-npm run build
+npm run compile
 ```
 
 
