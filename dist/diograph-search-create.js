@@ -6,7 +6,7 @@ const diograph_search_results_1 = require("./diograph-search-results");
 class DiographSearchCreate extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { searchResults: [], searchTerm: "paikka" };
+        this.state = { searchResults: [], searchTerm: "" };
     }
     render() {
         return (React.createElement("div", null,
