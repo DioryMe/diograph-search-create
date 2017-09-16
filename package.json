@@ -1,6 +1,6 @@
 {
   "name": "diograph-search-create",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "dist/diograph-search-create.js",
   "scripts": {
