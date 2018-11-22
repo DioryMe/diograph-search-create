@@ -1,22 +1,26 @@
-var path = require("path")
+var webpack = require('webpack');
 
 module.exports = {
-    entry: "./app/diograph-search-create.tsx",
-    output: {
-        filename: "diograph-search-create.js",
-        path: path.resolve(__dirname, "dist")
-    },
-    module: {
-        loaders: [
-            { test: /\.tsx?$/, loader: "ts-loader" },
-        ]
-    },
-    resolve: {
-        extensions: ['.ts', '.tsx', '.js']
-    },
-    devServer: {
-      contentBase: path.join(__dirname, 'dist'),
-      compress: true,
-      port: 9000
-    }
+  mode: "development",
+  entry: "./app/index.tsx",
+  output: {
+    filename: "./dist/bundle.js",
+    path: __dirname,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: [ { loader: "ts-loader" } ]
+      }
+    ]
+  },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js']
+  },
+  plugins: [
+    new webpack.EnvironmentPlugin({
+      'DIOGRAPH_SERVER_HOST': 'http://localhost:3000'
+    })
+  ]
 };
