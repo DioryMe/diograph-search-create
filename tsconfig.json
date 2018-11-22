@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es5",
-        "sourceMap": false,
-        "allowJs": true,
-        "outDir": "dist",
-        "jsx": "react"
+      "module": "commonjs",
+      "target": "es5",
+      "sourceMap": false,
+      "allowJs": true,
+      "outDir": "dist",
+      "jsx": "react"
     },
     "exclude": [
       "webpack.config.js",
