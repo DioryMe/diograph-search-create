@@ -3,26 +3,35 @@
   "version": "0.0.5",
   "description": "",
   "main": "dist/diograph-search-create.js",
+  "files": [
+    "dist/diograph-search-create.js",
+    "dist/diograph-search-input-field.js",
+    "dist/diograph-search-results.js"
+  ],
   "scripts": {
-    "start": "webpack-dev-server",
-    "test": "tsc && jasmine JASMINE_CONFIG_PATH=jasmine.json",
-    "compile": "tsc app/diograph-search-create.tsx --jsx react --outDir dist --target es6 --module commonjs"
+    "start": "npx webpack && cp ./app/index.html ./dist && npx webpack-dev-server --port 4208 --content-base dist/ --inline --hot",
+    "test": "npx tsc && npx jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "e2e": "npx tsc && npx webpack && npx jasmine JASMINE_CONFIG_PATH=jasmine.json",
+    "compile": "npx tsc",
+    "prepublish": "npx tsc"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "classnames": "2.2.5",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "corejs-typeahead": "^1.1.1"
+    "classnames": "2.2.6",
+    "corejs-typeahead": "1.2.1",
+    "react": "16.6.3",
+    "react-dom": "16.6.3"
   },
   "devDependencies": {
-    "@types/react": "^15.0.24",
-    "@types/jasmine": "*",
-    "@types/node": "*",
-    "jasmine": "*",
-    "ts-loader": "*",
-    "typescript": "*",
-    "webpack": "*"
+    "@types/react": "16.7.7",
+    "@types/jasmine": "3.3.0",
+    "@types/node": "10.12.10",
+    "jasmine": "3.3.0",
+    "ts-loader": "5.3.0",
+    "typescript": "3.1.6",
+    "webpack": "4.26.0",
+    "webpack-dev-server": "3.1.10",
+    "webpack-cli": "3.1.2"
   }
 }
