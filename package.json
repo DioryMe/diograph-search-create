@@ -9,7 +9,7 @@
     "dist/diograph-search-results.js"
   ],
   "scripts": {
-    "start": "npx webpack && cp ./app/index.html ./dist && npx webpack-dev-server --port 4208 --content-base dist/ --inline --hot",
+    "start": "npx webpack && cp ./app/index.html ./dist && npx webpack-dev-server",
     "test": "npx tsc && npx jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "e2e": "npx tsc && npx webpack && npx jasmine JASMINE_CONFIG_PATH=jasmine.json",
     "compile": "npx tsc",
