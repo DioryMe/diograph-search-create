@@ -5,7 +5,7 @@ Diograph Search-Create typeahead field as a React component
 ## Usage
 
 ```
-npm install diograph-search-create --save
+npm install diograph-search-create --save-dev
 ```
 
 ```
@@ -31,7 +31,8 @@ putInFocus(dioryId) {
 ## Development
 
 ```
-npm run compile
+npm start
 ```
+
 
 
