@@ -1,4 +1,5 @@
-var webpack = require('webpack');
+const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   mode: "development",
@@ -19,6 +20,7 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js']
   },
   plugins: [
+    new CleanWebpackPlugin(['dist'], { exclude: ["index.html"] }),
     new webpack.EnvironmentPlugin({
       'DIOGRAPH_SERVER_HOST': 'http://localhost:3000'
     })
