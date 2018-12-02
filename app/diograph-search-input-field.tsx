@@ -38,7 +38,7 @@ export class SearchInputField extends React.Component<SearchInputFieldProps, und
       datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
       queryTokenizer: Bloodhound.tokenizers.whitespace,
       remote: {
-        url: process.env.DIOGRAPH_SERVER_HOST + "/search",
+        url: process.env.DIOGRAPH_SERVER_HOST + "/v1/search",
         prepare: function(query, settings) {
           settings.url = settings.url + '?q=' + query,
           settings.headers = {
